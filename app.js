@@ -53,7 +53,7 @@ const getWinner = function (computerChoice, playerChoice) {
 
 startGameBtn.addEventListener('click', function () {
   if (gameIsRunning) return;
-  gameIsRunning = false;
+  gameIsRunning = true;
   console.log('Game is starting...');
   const playerChoice = getPlayerChoice();
   const computerChoice = getComputerChoice();
@@ -67,4 +67,5 @@ startGameBtn.addEventListener('click', function () {
     message = message + 'lost.';
   }
   alert(message);
+  gameIsRunning = false;
 });
